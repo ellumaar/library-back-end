@@ -20,6 +20,8 @@ dependencies {
     compileOnly("io.micronaut.serde:micronaut-serde-processor")
     runtimeOnly("ch.qos.logback:logback-classic")
     testImplementation("io.micronaut:micronaut-http-client")
+    runtimeOnly "org.postgresql:postgresql"
+    runtimeOnly("org.yaml:snakeyaml")
 }
 
 
