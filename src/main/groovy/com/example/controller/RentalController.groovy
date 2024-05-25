@@ -1,5 +1,7 @@
-package com.example
+package com.example.controller
 
+import com.example.domain.Rental
+import com.example.repository.RentalRepository
 import io.micronaut.http.HttpStatus
 import io.micronaut.http.annotation.Body
 import io.micronaut.http.annotation.Controller

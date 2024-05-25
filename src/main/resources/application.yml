@@ -1,3 +1,10 @@
+micronaut:
+  application:
+    name: library-back-end
+  server:
+    port: 8080
+  packages: com.example
+
 datasources:
   default:
     url: jdbc:postgresql://localhost:5432/library

@@ -1,4 +1,4 @@
-package com.example
+package com.example.domain
 
 import io.micronaut.serde.annotation.Serdeable
 import jakarta.persistence.Entity
