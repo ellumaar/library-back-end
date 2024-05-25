@@ -6,6 +6,7 @@ import com.example.domain.Rental
 import com.example.repository.RentalRepository
 import io.micronaut.http.annotation.Body
 import io.micronaut.http.annotation.Controller
+import io.micronaut.http.annotation.Delete
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
 import io.micronaut.http.annotation.Status
@@ -43,5 +44,11 @@ class BookController {
     @Status(HttpStatus.CREATED)
     Book createBook(@Body Book book) {
         bookRepository.save(book)
+    }
+
+    @Delete("/return/{bookId}/")
+    Book returnBook(@Body Long bookId) {
+        Long userId = 1L // hardcoded
+        bookRepository.deleteRentalByBookId(bookId, userId)
     }
 }
