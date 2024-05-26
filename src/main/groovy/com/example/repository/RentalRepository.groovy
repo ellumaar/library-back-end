@@ -8,4 +8,5 @@ import io.micronaut.data.repository.CrudRepository
 interface RentalRepository extends CrudRepository<Rental, Long> {
    List<Rental> findAll()
    List<Rental> findByBorrowedTrue()
+   boolean existsByBookId(Long bookId)
 }
