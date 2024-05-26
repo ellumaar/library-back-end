@@ -29,8 +29,7 @@ class BookController {
 
     @Get("/")
     List<Book> listAllBooks() {
-        LOG.info("Fetching all books")
-        bookRepository.findAll()
+        bookRepository.findAllBooksWithRentals()
     }
 
     @Get("/myBooks")
